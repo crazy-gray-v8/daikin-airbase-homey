@@ -1,4 +1,4 @@
-# Daikin Airbase Homey SDK v3
+# ***WIP!*** Daikin Airbase Homey SDK v3 ***WIP!***
 
 Local Homey SDK v3 app for a Daikin BRP15B61 Airbase wireless LAN adapter.
 
