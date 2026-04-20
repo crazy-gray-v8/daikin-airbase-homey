@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "default_device_name": "Daikin Air Conditioner",
+    "title": "Set up your Daikin Airbase unit",
+    "subtitle": "Add the device first, then enter the Airbase IP address in device settings.",
+    "intro": "This first version uses the Daikin local LAN API. After adding the device, open its settings and enter the Airbase IP or hostname.",
+    "errors": {
+      "poll_interval": "Poll interval must be at least 15 seconds."
+    }
+  },
+  "device": {
+    "errors": {
+      "missing_host": "Missing Airbase IP address or hostname in device settings."
+    }
+  }
+}

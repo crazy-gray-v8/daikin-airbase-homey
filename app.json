@@ -1,0 +1,732 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.graham.daikin.airbase",
+  "version": "1.0.0",
+  "compatibility": ">=12.4.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Daikin Airbase"
+  },
+  "description": {
+    "en": "Control a Daikin Airbase BRP15B61 adapter over your local network."
+  },
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Graham",
+    "email": "crazygrayv8@gmail.com"
+  },
+  "brandColor": "#0093d0",
+  "category": [
+    "climate"
+  ],
+  "flow": {
+    "conditions": [
+      {
+        "id": "zone_state_is",
+        "title": {
+          "en": "Zone [[zone]] is [[state]]"
+        },
+        "titleFormatted": {
+          "en": "Zone [[zone]] is [[state]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=daikin_airbase"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "zone_downstairs",
+                "label": {
+                  "en": "Downstairs"
+                }
+              },
+              {
+                "id": "zone_living",
+                "label": {
+                  "en": "Living"
+                }
+              },
+              {
+                "id": "zone_upstairs",
+                "label": {
+                  "en": "Upstairs"
+                }
+              }
+            ]
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "on",
+                "label": {
+                  "en": "On"
+                }
+              },
+              {
+                "id": "off",
+                "label": {
+                  "en": "Off"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fan_speed_is",
+        "title": {
+          "en": "Fan speed is [[speed]]"
+        },
+        "titleFormatted": {
+          "en": "Fan speed is [[speed]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=daikin_airbase"
+          },
+          {
+            "name": "speed",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "airside",
+                "label": {
+                  "en": "Airside"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "1_auto",
+                "label": {
+                  "en": "1 Auto"
+                }
+              },
+              {
+                "id": "2_auto",
+                "label": {
+                  "en": "2 Auto"
+                }
+              },
+              {
+                "id": "3_auto",
+                "label": {
+                  "en": "3 Auto"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mode_is",
+        "title": {
+          "en": "Mode is [[mode]]"
+        },
+        "titleFormatted": {
+          "en": "Mode is [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=daikin_airbase"
+          },
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "auto",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "cool",
+                "label": {
+                  "en": "Cool"
+                }
+              },
+              {
+                "id": "heat",
+                "label": {
+                  "en": "Heat"
+                }
+              },
+              {
+                "id": "fan",
+                "label": {
+                  "en": "Fan"
+                }
+              },
+              {
+                "id": "dry",
+                "label": {
+                  "en": "Dry"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "set_zone_state",
+        "title": {
+          "en": "Set zone [[zone]] to [[state]]"
+        },
+        "titleFormatted": {
+          "en": "Set zone [[zone]] to [[state]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=daikin_airbase"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "zone_downstairs",
+                "label": {
+                  "en": "Downstairs"
+                }
+              },
+              {
+                "id": "zone_living",
+                "label": {
+                  "en": "Living"
+                }
+              },
+              {
+                "id": "zone_upstairs",
+                "label": {
+                  "en": "Upstairs"
+                }
+              }
+            ]
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "on",
+                "label": {
+                  "en": "On"
+                }
+              },
+              {
+                "id": "off",
+                "label": {
+                  "en": "Off"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "set_fan_speed_value",
+        "title": {
+          "en": "Set fan speed to [[speed]]"
+        },
+        "titleFormatted": {
+          "en": "Set fan speed to [[speed]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=daikin_airbase"
+          },
+          {
+            "name": "speed",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "airside",
+                "label": {
+                  "en": "Airside"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "1_auto",
+                "label": {
+                  "en": "1 Auto"
+                }
+              },
+              {
+                "id": "2_auto",
+                "label": {
+                  "en": "2 Auto"
+                }
+              },
+              {
+                "id": "3_auto",
+                "label": {
+                  "en": "3 Auto"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "set_mode_value",
+        "title": {
+          "en": "Set mode to [[mode]]"
+        },
+        "titleFormatted": {
+          "en": "Set mode to [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=daikin_airbase"
+          },
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "auto",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "cool",
+                "label": {
+                  "en": "Cool"
+                }
+              },
+              {
+                "id": "heat",
+                "label": {
+                  "en": "Heat"
+                }
+              },
+              {
+                "id": "fan",
+                "label": {
+                  "en": "Fan"
+                }
+              },
+              {
+                "id": "dry",
+                "label": {
+                  "en": "Dry"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Daikin Air Conditioner"
+      },
+      "class": "thermostat",
+      "icon": "/drivers/daikin_airbase/assets/icon.svg",
+      "images": {
+        "small": "/drivers/daikin_airbase/assets/images/small.png",
+        "large": "/drivers/daikin_airbase/assets/images/large.png",
+        "xlarge": "/drivers/daikin_airbase/assets/images/xlarge.png"
+      },
+      "capabilities": [
+        "onoff",
+        "measure_temperature_setpoint",
+        "measure_temperature_current",
+        "daikin_mode_current",
+        "daikin_fan_speed_current",
+        "target_temperature",
+        "measure_temperature",
+        "daikin_mode",
+        "daikin_fan_speed",
+        "zone_downstairs",
+        "zone_living",
+        "zone_upstairs",
+        "button_refresh_data"
+      ],
+      "capabilitiesOptions": {
+        "button_refresh_data": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Refresh now"
+          },
+          "desc": {
+            "en": "Request an immediate poll from the Airbase adapter."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "host",
+          "type": "text",
+          "label": {
+            "en": "Airbase IP or hostname"
+          },
+          "hint": {
+            "en": "Example: 192.168.0.222"
+          },
+          "value": ""
+        },
+        {
+          "id": "port",
+          "type": "number",
+          "label": {
+            "en": "HTTP port"
+          },
+          "hint": {
+            "en": "Default local Daikin API port."
+          },
+          "value": 80
+        },
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "label": {
+            "en": "Poll interval (seconds)"
+          },
+          "hint": {
+            "en": "Minimum 15 seconds. Default 60."
+          },
+          "value": 60
+        }
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "daikin_airbase"
+    }
+  ],
+  "capabilities": {
+    "button_refresh_data": {
+      "type": "boolean",
+      "title": {
+        "en": "Refresh data"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "daikin_fan_speed": {
+      "type": "enum",
+      "title": {
+        "en": "Fan speed"
+      },
+      "values": [
+        {
+          "id": "airside",
+          "title": {
+            "en": "Airside"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "3"
+          }
+        },
+        {
+          "id": "1_auto",
+          "title": {
+            "en": "1 Auto"
+          }
+        },
+        {
+          "id": "2_auto",
+          "title": {
+            "en": "2 Auto"
+          }
+        },
+        {
+          "id": "3_auto",
+          "title": {
+            "en": "3 Auto"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker"
+    },
+    "daikin_fan_speed_current": {
+      "type": "enum",
+      "title": {
+        "en": "Current fan"
+      },
+      "values": [
+        {
+          "id": "airside",
+          "title": {
+            "en": "Airside"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "3"
+          }
+        },
+        {
+          "id": "1_auto",
+          "title": {
+            "en": "1 Auto"
+          }
+        },
+        {
+          "id": "2_auto",
+          "title": {
+            "en": "2 Auto"
+          }
+        },
+        {
+          "id": "3_auto",
+          "title": {
+            "en": "3 Auto"
+          }
+        }
+      ],
+      "icon": "/assets/capabilities/fan_speed.svg",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "daikin_mode": {
+      "type": "enum",
+      "title": {
+        "en": "Mode"
+      },
+      "values": [
+        {
+          "id": "auto",
+          "title": {
+            "en": "Auto"
+          }
+        },
+        {
+          "id": "dry",
+          "title": {
+            "en": "Dry"
+          }
+        },
+        {
+          "id": "cool",
+          "title": {
+            "en": "Cool"
+          }
+        },
+        {
+          "id": "heat",
+          "title": {
+            "en": "Heat"
+          }
+        },
+        {
+          "id": "fan",
+          "title": {
+            "en": "Fan"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker"
+    },
+    "daikin_mode_current": {
+      "type": "enum",
+      "title": {
+        "en": "Current mode"
+      },
+      "values": [
+        {
+          "id": "auto",
+          "title": {
+            "en": "Auto"
+          }
+        },
+        {
+          "id": "dry",
+          "title": {
+            "en": "Dry"
+          }
+        },
+        {
+          "id": "cool",
+          "title": {
+            "en": "Cool"
+          }
+        },
+        {
+          "id": "heat",
+          "title": {
+            "en": "Heat"
+          }
+        },
+        {
+          "id": "fan",
+          "title": {
+            "en": "Fan"
+          }
+        }
+      ],
+      "icon": "/assets/capabilities/fan_mode.svg",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "measure_temperature_current": {
+      "type": "number",
+      "title": {
+        "en": "Current temp"
+      },
+      "units": {
+        "en": "C"
+      },
+      "icon": "/assets/capabilities/measure_temperature.svg",
+      "insights": false,
+      "decimals": 0,
+      "min": 0,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "measure_temperature_setpoint": {
+      "type": "number",
+      "title": {
+        "en": "Setpoint"
+      },
+      "units": {
+        "en": "C"
+      },
+      "icon": "/assets/capabilities/measure_temperature.svg",
+      "insights": false,
+      "decimals": 0,
+      "min": 0,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "zone_downstairs": {
+      "type": "boolean",
+      "title": {
+        "en": "Downstairs"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle"
+    },
+    "zone_living": {
+      "type": "boolean",
+      "title": {
+        "en": "Living"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle"
+    },
+    "zone_upstairs": {
+      "type": "boolean",
+      "title": {
+        "en": "Upstairs"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle"
+    }
+  }
+}

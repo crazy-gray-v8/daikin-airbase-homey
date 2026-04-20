@@ -1,0 +1,86 @@
+{
+  "name": {
+    "en": "Daikin Air Conditioner"
+  },
+  "class": "thermostat",
+  "icon": "/drivers/daikin_airbase/assets/icon.svg",
+  "images": {
+    "small": "/drivers/daikin_airbase/assets/images/small.png",
+    "large": "/drivers/daikin_airbase/assets/images/large.png",
+    "xlarge": "/drivers/daikin_airbase/assets/images/xlarge.png"
+  },
+  "capabilities": [
+    "onoff",
+    "measure_temperature_setpoint",
+    "measure_temperature_current",
+    "daikin_mode_current",
+    "daikin_fan_speed_current",
+    "target_temperature",
+    "measure_temperature",
+    "daikin_mode",
+    "daikin_fan_speed",
+    "zone_downstairs",
+    "zone_living",
+    "zone_upstairs",
+    "button_refresh_data"
+  ],
+  "capabilitiesOptions": {
+    "button_refresh_data": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Refresh now"
+      },
+      "desc": {
+        "en": "Request an immediate poll from the Airbase adapter."
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": "host",
+      "type": "text",
+      "label": {
+        "en": "Airbase IP or hostname"
+      },
+      "hint": {
+        "en": "Example: 192.168.0.222"
+      },
+      "value": ""
+    },
+    {
+      "id": "port",
+      "type": "number",
+      "label": {
+        "en": "HTTP port"
+      },
+      "hint": {
+        "en": "Default local Daikin API port."
+      },
+      "value": 80
+    },
+    {
+      "id": "poll_interval",
+      "type": "number",
+      "label": {
+        "en": "Poll interval (seconds)"
+      },
+      "hint": {
+        "en": "Minimum 15 seconds. Default 60."
+      },
+      "value": 60
+    }
+  ],
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

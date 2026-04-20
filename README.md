@@ -1,4 +1,4 @@
-# ***WIP!*** Daikin Airbase Homey SDK v3 ***WIP!***
+# Daikin Airbase Homey SDK v3
 
 Local Homey SDK v3 app for a Daikin BRP15B61 Airbase wireless LAN adapter.
 
@@ -6,8 +6,10 @@ Local Homey SDK v3 app for a Daikin BRP15B61 Airbase wireless LAN adapter.
 
 - Manual pairing
 - Local HTTP polling of the Airbase adapter
-- Read current power, mode, target temperature, room temperature and humidity
-- Write on/off, mode, target temperature and fan speed
+- Automatic detection of the Airbase `/skyfi` API base path
+- Read current power, setpoint, room temperature, mode, fan speed and zone state
+- Write on/off, mode, target temperature, fan speed and zone state
+- Flow cards for mode, fan speed and zones
 
 ## Setup
 
@@ -22,9 +24,12 @@ Local Homey SDK v3 app for a Daikin BRP15B61 Airbase wireless LAN adapter.
 - `/aircon/get_model_info`
 - `/aircon/get_control_info`
 - `/aircon/get_sensor_info`
+- `/aircon/get_zone_setting`
 - `/aircon/set_control_info`
+- `/aircon/set_zone_setting`
 
 ## Notes
 
-- This version assumes the BRP15B61 exposes the older BRP069-style local API.
-- Zone control and UDP auto-discovery are planned follow-up steps.
+- The BRP15B61 on this system exposes the local API under `/skyfi`.
+- Temperature writes use `stemp`; the adapter maintains the heat/cool stored setpoints internally.
+- UDP auto-discovery is not implemented yet.

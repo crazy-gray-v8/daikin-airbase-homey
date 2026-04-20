@@ -1,0 +1,12 @@
+{
+  "name": "daikin-airbase-homey-sdk3",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daikin Airbase Homey SDK 3 app scaffold.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node --check app.js && node --check lib/daikin-airbase-client.js && node --check drivers/daikin_airbase/driver.js && node --check drivers/daikin_airbase/device.js"
+  }
+}

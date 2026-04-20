@@ -1,0 +1,324 @@
+{
+  "actions": [
+    {
+      "id": "set_zone_state",
+      "title": {
+        "en": "Set zone [[zone]] to [[state]]"
+      },
+      "titleFormatted": {
+        "en": "Set zone [[zone]] to [[state]]"
+      },
+      "args": [
+        {
+          "name": "zone",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "zone_downstairs",
+              "label": {
+                "en": "Downstairs"
+              }
+            },
+            {
+              "id": "zone_living",
+              "label": {
+                "en": "Living"
+              }
+            },
+            {
+              "id": "zone_upstairs",
+              "label": {
+                "en": "Upstairs"
+              }
+            }
+          ]
+        },
+        {
+          "name": "state",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "set_fan_speed_value",
+      "title": {
+        "en": "Set fan speed to [[speed]]"
+      },
+      "titleFormatted": {
+        "en": "Set fan speed to [[speed]]"
+      },
+      "args": [
+        {
+          "name": "speed",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "airside",
+              "label": {
+                "en": "Airside"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "3"
+              }
+            },
+            {
+              "id": "1_auto",
+              "label": {
+                "en": "1 Auto"
+              }
+            },
+            {
+              "id": "2_auto",
+              "label": {
+                "en": "2 Auto"
+              }
+            },
+            {
+              "id": "3_auto",
+              "label": {
+                "en": "3 Auto"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "set_mode_value",
+      "title": {
+        "en": "Set mode to [[mode]]"
+      },
+      "titleFormatted": {
+        "en": "Set mode to [[mode]]"
+      },
+      "args": [
+        {
+          "name": "mode",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "auto",
+              "label": {
+                "en": "Auto"
+              }
+            },
+            {
+              "id": "cool",
+              "label": {
+                "en": "Cool"
+              }
+            },
+            {
+              "id": "heat",
+              "label": {
+                "en": "Heat"
+              }
+            },
+            {
+              "id": "fan",
+              "label": {
+                "en": "Fan"
+              }
+            },
+            {
+              "id": "dry",
+              "label": {
+                "en": "Dry"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "zone_state_is",
+      "title": {
+        "en": "Zone [[zone]] is [[state]]"
+      },
+      "titleFormatted": {
+        "en": "Zone [[zone]] is [[state]]"
+      },
+      "args": [
+        {
+          "name": "zone",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "zone_downstairs",
+              "label": {
+                "en": "Downstairs"
+              }
+            },
+            {
+              "id": "zone_living",
+              "label": {
+                "en": "Living"
+              }
+            },
+            {
+              "id": "zone_upstairs",
+              "label": {
+                "en": "Upstairs"
+              }
+            }
+          ]
+        },
+        {
+          "name": "state",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fan_speed_is",
+      "title": {
+        "en": "Fan speed is [[speed]]"
+      },
+      "titleFormatted": {
+        "en": "Fan speed is [[speed]]"
+      },
+      "args": [
+        {
+          "name": "speed",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "airside",
+              "label": {
+                "en": "Airside"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "3"
+              }
+            },
+            {
+              "id": "1_auto",
+              "label": {
+                "en": "1 Auto"
+              }
+            },
+            {
+              "id": "2_auto",
+              "label": {
+                "en": "2 Auto"
+              }
+            },
+            {
+              "id": "3_auto",
+              "label": {
+                "en": "3 Auto"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mode_is",
+      "title": {
+        "en": "Mode is [[mode]]"
+      },
+      "titleFormatted": {
+        "en": "Mode is [[mode]]"
+      },
+      "args": [
+        {
+          "name": "mode",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "auto",
+              "label": {
+                "en": "Auto"
+              }
+            },
+            {
+              "id": "cool",
+              "label": {
+                "en": "Cool"
+              }
+            },
+            {
+              "id": "heat",
+              "label": {
+                "en": "Heat"
+              }
+            },
+            {
+              "id": "fan",
+              "label": {
+                "en": "Fan"
+              }
+            },
+            {
+              "id": "dry",
+              "label": {
+                "en": "Dry"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
