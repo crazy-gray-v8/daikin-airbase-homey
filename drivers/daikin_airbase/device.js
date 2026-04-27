@@ -363,6 +363,10 @@ class DaikinAirbaseDevice extends Homey.Device {
     return this.getCapabilityValue('daikin_mode') === modeId;
   }
 
+  async refreshCurrentData() {
+    await this.poll(true);
+  }
+
   async applyStatus(status) {
     const { basicInfo, modelInfo, controlInfo, sensorInfo, zoneInfo } = status;
     const interpretedState = interpretHomeyState(controlInfo, sensorInfo);
