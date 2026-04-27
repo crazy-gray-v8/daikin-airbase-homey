@@ -40,6 +40,12 @@ class DaikinAirbaseDriver extends Homey.Driver {
 
     this.homey.flow.getConditionCard('mode_is')
       .registerRunListener(async args => args.device.isModeValue(this.normalizeDropdownValue(args.mode)));
+
+    this.homey.flow.getActionCard('refresh_device_data')
+      .registerRunListener(async args => {
+        await args.device.refreshCurrentData();
+        return true;
+      });
   }
 
   normalizeDropdownValue(value) {

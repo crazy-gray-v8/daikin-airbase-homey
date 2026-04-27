@@ -158,6 +158,15 @@
           ]
         }
       ]
+    },
+    {
+      "id": "refresh_device_data",
+      "title": {
+        "en": "Refresh current data"
+      },
+      "titleFormatted": {
+        "en": "Refresh current data"
+      }
     }
   ],
   "conditions": [
